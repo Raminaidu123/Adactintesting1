@@ -1,0 +1,12 @@
+﻿{
+  "Id": "lUiSyce2pk-d6isCiWPdjQ",
+  "Reference": "go1OksbVsUKtScm3PWxLKw/lUiSyce2pk-d6isCiWPdjQ",
+  "ParentRef": "go1OksbVsUKtScm3PWxLKw/2pkuJiBO8k2Wr0-pGkqt7A",
+  "Name": "1.0",
+  "Type": "AppVersion",
+  "Created": "2021-12-25T06:06:00.7845556Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-25T06:06:00.7845556Z"
+}

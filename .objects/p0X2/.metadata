@@ -1,0 +1,14 @@
+﻿{
+  "Id": "p0X2-TLRJE-K3CF9UVhMvw",
+  "Reference": "go1OksbVsUKtScm3PWxLKw/p0X2-TLRJE-K3CF9UVhMvw",
+  "Name": "NewApplication",
+  "Type": "App",
+  "Created": "2021-12-24T13:33:15.2051764Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-24T13:33:17.9426291Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

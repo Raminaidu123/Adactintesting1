@@ -1,0 +1,385 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:a="clr-namespace:AdactinLibrary;assembly=AdactinLibrary" xmlns:af="clr-namespace:AdactinLibrary.FillAdactinDetails;assembly=AdactinLibrary" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="StrTotalprice" Type="InArgument(x:Double)" />
+    <x:Property Name="finaltotalpriceStr" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Main.StrTotalprice>
+    <InArgument x:TypeArguments="x:Double" />
+  </this:Main.StrTotalprice>
+  <this:Main.finaltotalpriceStr>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.finaltotalpriceStr>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>906,4628</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="44">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>AdactinLibrary</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>ReporterForUiPath.Activities</x:String>
+      <x:String>ReporterForUiPath.Enums</x:String>
+      <x:String>AdactinLibrary.FillAdactinDetails</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="36">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>AdactinLibrary</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>ReporterForUiPath.Activities</AssemblyReference>
+      <AssemblyReference>ReporterForUiPath</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="916,4563.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="checkindatein" />
+      <Variable x:TypeArguments="x:String" Name="incheckindate" />
+      <Variable x:TypeArguments="x:String" Name="incheckoutdate" />
+      <Variable x:TypeArguments="x:String" Name="innumofrooms" />
+      <Variable x:TypeArguments="x:String" Name="inhotel" />
+      <Variable x:TypeArguments="x:String" Name="inlocation" />
+      <Variable x:TypeArguments="x:String" Name="inRoomtype" />
+      <Variable x:TypeArguments="x:String" Name="variable1" />
+      <Variable x:TypeArguments="x:Boolean" Name="verifyLogin" />
+      <Variable x:TypeArguments="x:String" Name="inchildperroom" />
+      <Variable x:TypeArguments="x:String" Name="inadultsperroom" />
+      <Variable x:TypeArguments="x:Boolean" Name="errormessage" />
+      <Variable x:TypeArguments="x:String" Name="ActNumofrooms" />
+      <Variable x:TypeArguments="x:Boolean" Name="Actroomtype" />
+      <Variable x:TypeArguments="x:Int32" Name="intexpectedprice" />
+      <Variable x:TypeArguments="x:String" Name="strexpectedprice" />
+      <Variable x:TypeArguments="x:String" Name="totalpriceGST" />
+      <Variable x:TypeArguments="x:String" Name="finalbilledprice" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <a:ReadDatafromDictionary sap:VirtualizedContainerService.HintSize="874,22" sap2010:WorkflowViewState.IdRef="ReadDatafromDictionary_1" IntNumofRooms="[innumofrooms]" StrHotel="[inhotel]" StrLocation="[inlocation]" StrRoomtype="[inRoomtype]" adultsperroom="[inadultsperroom]" checkindate="[incheckindate]" checkoutdate="[incheckoutdate]" childrenperroom="[inchildperroom]">
+      <a:ReadDatafromDictionary.ExcelDatatable>
+        <InArgument x:TypeArguments="sd:DataTable" />
+      </a:ReadDatafromDictionary.ExcelDatatable>
+      <a:ReadDatafromDictionary.Executionflag>
+        <InArgument x:TypeArguments="x:String" />
+      </a:ReadDatafromDictionary.Executionflag>
+      <a:ReadDatafromDictionary.intcounter>
+        <InArgument x:TypeArguments="x:Int32" />
+      </a:ReadDatafromDictionary.intcounter>
+    </a:ReadDatafromDictionary>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="874,305.333333333333" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,226.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_16">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ra:CreateReport ContinueOnError="{x:Null}" isCreated="{x:Null}" DisplayName="Create Report" sap:VirtualizedContainerService.HintSize="334,134.666666666667" sap2010:WorkflowViewState.IdRef="CreateReport_1" ReportLocation="C:\Users\Raminaidu Sasapu\OneDrive\Documents\UiPath\Reports" ReportName="TC 110_Check correct total price is being calucalated " />
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ra:StartTest ContinueOnError="{x:Null}" TagName="{x:Null}" TestDescription="{x:Null}" testList="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="874,85.3333333333333" sap2010:WorkflowViewState.IdRef="StartTest_1" Priority="Low" TestName="TC 110_Check correct total price is being calucalated " />
+    <a:AdactinLogin sap:VirtualizedContainerService.HintSize="874,22" sap2010:WorkflowViewState.IdRef="AdactinLogin_1" Password="[&quot;Password123$&quot;]" Username="Adactin1111" />
+    <ui:UiElementExists DisplayName="Element Exists 'TD'" Exists="[verifyLogin]" sap:VirtualizedContainerService.HintSize="874,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+      <ui:UiElementExists.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a180dc97-b57c-4a37-b67a-02cb31316140" InformativeScreenshot="8bb2159f1636b845b740c46c7b100dc2" Selector="&lt;html app='chrome.exe' title='Adactin.com - Search Hotel' /&gt;&lt;webctrl idx='2' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:UiElementExists.Target>
+    </ui:UiElementExists>
+    <If Condition="[verifyLogin]" sap:VirtualizedContainerService.HintSize="874,482.666666666667" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,226.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ra:StepStatus CodeBlock="{x:Null}" ContinueOnError="{x:Null}" statusInfo="{x:Null}" ActualResult="Adactin Login login successful" Description="Login should be successful" DisplayName="Step Status" ExpectedResult="Adactin login should be successful" sap:VirtualizedContainerService.HintSize="334,134.666666666667" sap2010:WorkflowViewState.IdRef="StepStatus_2" Name="Verify Adactin Login fucntionality" Status="Pass" TakeScreenshot="True" />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="418,318.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence sap:VirtualizedContainerService.HintSize="376,226.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ra:StepStatus CodeBlock="{x:Null}" ContinueOnError="{x:Null}" statusInfo="{x:Null}" ActualResult="Adactin Login not should be successful" Description="Login should be successful" DisplayName="Step Status" ExpectedResult="Adactin login is successful" sap:VirtualizedContainerService.HintSize="334,134.666666666667" sap2010:WorkflowViewState.IdRef="StepStatus_3" Name="Verify Adactin Login fucntionality" Status="Fail" TakeScreenshot="True" />
+          </Sequence>
+        </Sequence>
+      </If.Else>
+    </If>
+    <af:FillAdactinLoginDetails sap:VirtualizedContainerService.HintSize="874,22" sap2010:WorkflowViewState.IdRef="FillAdactinLoginDetails_1" inadultsperperson="[inadultsperroom]" incheckindate="[DateTime.Now.ToString(&quot;dd/MM/yyyy&quot;)]" incheckoutdate="[DateTime.Now.AddDays(1).ToString(&quot;dd/MM/yyyy&quot;)]" inchildrenperroom="[inchildperroom]" inhotels="[inhotel]" inlocation="[inlocation]" innumofrooms="[innumofrooms]" inroomtype="[inRoomtype]">
+      <af:FillAdactinLoginDetails.inAdultsPerroom>
+        <InArgument x:TypeArguments="x:String" />
+      </af:FillAdactinLoginDetails.inAdultsPerroom>
+    </af:FillAdactinLoginDetails>
+    <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="Hotel Search fileds were successfully populated" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="874,134.666666666667" sap2010:WorkflowViewState.IdRef="StepStatus_5" Name="Fill hotel search fields" Status="Compare" TakeScreenshot="True" />
+    <a:Selecthotel sap:VirtualizedContainerService.HintSize="874,22" sap2010:WorkflowViewState.IdRef="Selecthotel_1" />
+    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="874,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Select Hotel" sap:VirtualizedContainerService.HintSize="874,1075.33333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="b2a95429-a018-4073-8366-33f409dd946b" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="376,857.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="Totalprice" />
+              <Variable x:TypeArguments="x:String" Name="Acttotalprice" />
+              <Variable x:TypeArguments="x:String" Name="ActGST" />
+              <Variable x:TypeArguments="x:Int32" Name="intGST" />
+              <Variable x:TypeArguments="x:Int32" Name="inttotalrpcie" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText DisplayName="Get Text 'Totalprice'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NGetText_1" Version="V1">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="http://adactinhotelapp.com/SelectHotel.php" ContentHash="7UwTAFDKYk2SrAPGAMrq_Q" DesignTimeRectangle="1268, 624, 140, 27" ElementType="InputBox" FriendlyName="'Totalprice'" FullSelectorArgument="&lt;webctrl id='total_price_0' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='total_price_0' tag='INPUT' type='text' aaname='' /&gt;" Guid="24bd96d4-7f97-410e-b558-c247042adebe" ImageBase64="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" InformativeScreenshot="c07cd7dd24dcab98bcd384d94c024fc0.png" Reference="kdNNbXJVQUqR-tOPk3Gzpw/IoN40k2qZ0ufPOVjRRuudg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Adactin.com - Select Hotel' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1268, 558, 131, 50" FriendlyName="'Totalprice'" FullSelectorArgument="&lt;webctrl tableCol='10' tag='STRONG' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='STRONG' aaname='Total Price (excl. GST) ' check:text='Total Price (excl. GST)' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.Text>
+                <OutArgument x:TypeArguments="x:String">[Totalprice]</OutArgument>
+              </uix:NGetText.Text>
+            </uix:NGetText>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="334,564.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[Acttotalprice]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[Totalprice.Split(" "C)(2).ToString]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[inttotalrpcie]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[Integer.Parse(Acttotalprice)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[ActGST]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[(inttotalrpcie/10).ToString]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_4">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Double">[StrTotalprice]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Double">[cdbl(inttotalrpcie)+(cdbl(ActGST))]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_5">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[finaltotalpriceStr]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[StrTotalprice.ToString]</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="8HF0aNObeUGC5Rmcnze9Tg" IconBase64="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" InformativeScreenshot="bc5c9e7a8fc13221afde0827e2c13c53.png" Reference="kdNNbXJVQUqR-tOPk3Gzpw/I1Ppov9yMEmLRDxeGsYcCA" Selector="&lt;html app='chrome.exe' title='Adactin.com - Select Hotel' /&gt;" Url="http://adactinhotelapp.com/SelectHotel.php" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <a:ClickContinueButtonSelecthotel sap:VirtualizedContainerService.HintSize="874,22" sap2010:WorkflowViewState.IdRef="ClickContinueButtonSelecthotel_1" />
+    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="874,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="BookNow" sap:VirtualizedContainerService.HintSize="874,1608" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="4a2b51ae-05f5-474c-ad8e-7aee4bbf4124" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="840,1390" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText DisplayName="Get Text 'Final Billed Price'" sap:VirtualizedContainerService.HintSize="798,158" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="4a2b51ae-05f5-474c-ad8e-7aee4bbf4124" Version="V1">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="http://adactinhotelapp.com/BookingConfirm.php" ContentHash="nwCLCMPGq0SckZb7i3lMtw" DesignTimeRectangle="245, 517, 386, 44" ElementType="InputBox" FriendlyName="'AUD $ 148.5'" FullSelectorArgument="&lt;webctrl id='final_price' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='final_price' tag='INPUT' type='text' aaname='' /&gt;" Guid="33554023-6222-4102-8613-4ba2564b3a56" ImageBase64="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" InformativeScreenshot="1fea63c8ef32bfd9629a07f2f1a3bd6e.png" IsResponsive="True" Reference="kdNNbXJVQUqR-tOPk3Gzpw/d1q2nnIS9kaLHws6euGMsw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Adactin.com - Hotel Booking Confirmation' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="11, 514, 231, 50" ElementType="Text" FriendlyName="'Final Billed Price'" FullSelectorArgument="&lt;webctrl parentid='booking_form' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='14' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='booking_form' tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' tag='TD' aaname='Final Billed Price   ' check:text='Final Billed Price' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.Text>
+                <OutArgument x:TypeArguments="x:String">[finalbilledprice]</OutArgument>
+              </uix:NGetText.Text>
+            </uix:NGetText>
+            <If Condition="[finalbilledprice.contains(finaltotalpriceStr)]" sap:VirtualizedContainerService.HintSize="798,392.666666666667" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,229.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="[&quot;Total price present as expected in booking confirmation screen::&quot;+finaltotalpriceStr]" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="334,134.666666666667" sap2010:WorkflowViewState.IdRef="StepStatus_6" Name="Verify total price" Status="Pass" TakeScreenshot="True" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,229.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="[&quot;Total price not present as expected in booking confirmation screen::&quot;+finaltotalpriceStr]" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="334,134.666666666667" sap2010:WorkflowViewState.IdRef="StepStatus_7" Name="Verify total price" Status="Fail" TakeScreenshot="True" />
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Book A Hotel" sap:VirtualizedContainerService.HintSize="798,667.333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="efb72237-2371-475c-a042-5ae12bf627ad" Version="V1">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,449.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Logout'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V1">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="http://adactinhotelapp.com/BookHotel.php" ContentHash="tq2KlX4KuUCQFc3JcOMQNQ" DesignTimeRectangle="1339, 308, 72, 25" ElementType="Text" FriendlyName="'Logout'" FullSelectorArgument="&lt;webctrl aaname='Logout' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Logout' tag='A' type='' check:text='Logout' /&gt;" Guid="c147328f-1d0c-4832-a72d-b1abe1c15c0a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEwAAAAdCAYAAAAARYp5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKzSURBVGhD7ZcxixpBFMfzOe4rWF4VUvkNbAQbg6AECyEGFJuAgSsMCIoKC2fh4cISTFjIcQlEPC8se7Asd1xhYRG40iJgkSLdFf/M7uzquDtrbpSYTZji17x5M+/Nf+a92X1yewtIHo8UTBApmCBSMEGkYIJIwQSRggkiBRMkJJhebSJ91ERD27RLKFIwFm3k7j1dnfHHCVIwFimYIIcS7Fo3cfK8jYwTjJBJKqi/ncPg+FJ+Ynyqo5Kk/ulEG8X8J6idEbJbEhaJs30fMzTcNUbQPZvvz4XJZ2/Bpq3+agNBMqmPODeDcxZQX3S5/is4gonGiadgF19QdBZMdHFyuoBtU7s9vkMjRdfJ1eawmTnTjrfx5BD9D0tv7AH25B5qVQkl6LJDHFHBXP50Sfq+ld4yPG7eoJ5wxgdQDd8+R/OZY1PQu2B8fSISFo8TS8G+eZvfTJTl/avAWuSmFJyE0peYBnxduAnvEIcQQ8EigjJMm7TEyq3v1Pa7hLjjO8QhSMH+fcF2KJV3Om34pZuNBr2Cm/B/U5JrX/ZkV/CasWGi5iSU0KBZjK9PRMLCcQh6bcscw8JrJ05QMP9A8yauWTvDXoKtnvujLuqPeu6XUPOe/aWFsflA7dYS570RSsd0LHTCwnHIR64yoGslNaiTiDhBwSZfUXbtfbT0H2s7Q6Rg21kHEv5w/XyJsnsjwuSS3gctpySE41hzNPw/iQCF4tATJiAYc6AbMPnsLZiD8K/R1R2ajH82NUTrjJSOV5IZclt484TjGHP08gqy3gFlUxoUzSnRLQ+JeY9BdYCcfwuP2yi8WecTEuxvYvRoGdUUfjnEgXgIZpOf8TMdJecmJEjzvuL4xITDCzYmPcwtBz6VzoI/LyYcXjBjRvpXF4WnjFCkT5TyOgYRL1OciFUPiz/AL6hCwN/OxojEAAAAAElFTkSuQmCC" InformativeScreenshot="769189364b4515262cd874fbffdbc0d0.png" Reference="kdNNbXJVQUqR-tOPk3Gzpw/0tnRuI_vhUOt-SZewV8VCQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Adactin.com - Book A Hotel' /&gt;" SearchSteps="FuzzySelector, Image">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="1129, 308, 185, 25" ElementType="Text" FriendlyName="'Change Password'" FullSelectorArgument="&lt;webctrl aaname='Change Password' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Change Password' tag='A' type='' check:text='Change Password' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'ClickheretoLoginagain'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" Version="V1">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="http://adactinhotelapp.com/Logout.php" ContentHash="VjvgEMLgG0GKmdMyyu5gbg" DesignTimeRectangle="788, 368, 326, 29" ElementType="Text" FriendlyName="'Click here'" FullSelectorArgument="&lt;webctrl tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' type='' aaname='Click here to login again' check:text='Click here to login again' /&gt;" Guid="53e03a2d-a1d6-410e-9476-fa40054a9c57" ImageBase64="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" InformativeScreenshot="91253a73558f08f924f2c1b5bfe5220d.png" Reference="kdNNbXJVQUqR-tOPk3Gzpw/mQxh94dH20m11BMi3iz5BA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Adactin.com - Logout' /&gt;" SearchSteps="FuzzySelector, Image" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="0CQ1YlcJrEWKxBwHT4wTUg" IconBase64="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" InformativeScreenshot="2340ac3ac2cd9a3d4fadcf7825d65714.png" Reference="kdNNbXJVQUqR-tOPk3Gzpw/5WwGbWSYqUOxIUAcAbevCw" Selector="&lt;html app='chrome.exe' title='Adactin.com - Book A Hotel' /&gt;" Url="http://adactinhotelapp.com/BookHotel.php" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="PJY-fb7osEyqORiEGF717w" IconBase64="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" InformativeScreenshot="4231f37e52b1e9d13148ddbc67ca7e23.png" Reference="kdNNbXJVQUqR-tOPk3Gzpw/OHsGPEVCwUS7JOcn-mxX7Q" Selector="&lt;html app='chrome.exe' title='Adactin.com - Book A Hotel' /&gt;" Url="http://adactinhotelapp.com/BookHotel.php" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

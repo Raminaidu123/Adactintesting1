@@ -1,0 +1,12 @@
+﻿{
+  "Id": "WbW23ykqokuw2DrO5Q-_yw",
+  "Reference": "go1OksbVsUKtScm3PWxLKw/WbW23ykqokuw2DrO5Q-_yw",
+  "ParentRef": "go1OksbVsUKtScm3PWxLKw/lUiSyce2pk-d6isCiWPdjQ",
+  "Name": "Chrome: Adactin.com - Book A Hotel",
+  "Type": "Screen",
+  "Created": "2021-12-25T06:06:00.7927567Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-25T06:06:00.7927567Z"
+}

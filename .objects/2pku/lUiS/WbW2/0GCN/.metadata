@@ -1,0 +1,13 @@
+﻿{
+  "Id": "0GCNVVJDEEWJ11l2nvZl3Q",
+  "Reference": "go1OksbVsUKtScm3PWxLKw/0GCNVVJDEEWJ11l2nvZl3Q",
+  "ParentRef": "go1OksbVsUKtScm3PWxLKw/WbW23ykqokuw2DrO5Q-_yw",
+  "Name": "Logout",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2021-12-25T06:06:00.8904443Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-25T06:06:00.8904443Z"
+}

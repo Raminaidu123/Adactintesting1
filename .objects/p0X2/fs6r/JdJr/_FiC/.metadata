@@ -1,0 +1,14 @@
+﻿{
+  "Id": "_FiC1TBTVUmHdyYPYBe_pg",
+  "Reference": "go1OksbVsUKtScm3PWxLKw/_FiC1TBTVUmHdyYPYBe_pg",
+  "ParentRef": "go1OksbVsUKtScm3PWxLKw/JdJryRmlC0qwltQIYyhKog",
+  "Name": "Totalprice",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2021-12-24T13:39:17.9579872Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-24T13:39:17.9579872Z"
+}

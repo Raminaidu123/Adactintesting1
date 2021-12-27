@@ -1,0 +1,15 @@
+﻿{
+  "Id": "o7MXMY6sJE6EAntaim4gSw",
+  "Reference": "go1OksbVsUKtScm3PWxLKw/o7MXMY6sJE6EAntaim4gSw",
+  "ParentRef": "go1OksbVsUKtScm3PWxLKw/JdJryRmlC0qwltQIYyhKog",
+  "Name": "TotalPrice",
+  "Description": "dadsdfd",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2021-12-24T13:33:33.2952891Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-24T13:33:33.2952891Z"
+}

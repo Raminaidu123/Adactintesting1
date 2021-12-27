@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="http://adactinhotelapp.com/BookHotel.php" ContentHash="Y-tAy3MxNEG7bK8r8fc2DA" DesignTimeRectangle="245, 776, 386, 44" ElementType="InputBox" FriendlyName="'AUD $ 135'" FullSelectorArgument="&lt;webctrl id='total_price_dis' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='total_price_dis' tag='INPUT' type='text' aaname='' /&gt;" Guid="c57aae44-e740-4a29-9a58-996edd4608ec" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Adactin.com - Book A Hotel' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="11, 773, 231, 50" ElementType="Text" FriendlyName="'Total Price'" FullSelectorArgument="&lt;webctrl parentid='book_hotel_form' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='9' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='book_hotel_form' tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' tag='TD' aaname='Total Price ' check:text='Total Price' /&gt;" SearchSteps="FuzzySelector, Image">
+        <imageRef attrName="ImageBase64" xmlns="">1CXO5emT9QUGOxF9oazrfzQ</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0E3ohc9ChekW-T8-5Bgce6g</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="a858de45058a5d9bec00010f125ebc46.png" xmlns="">0NGDBL9hEwE2eq7-JWx_Zkw</imageRef>
+</TargetAnchorable>

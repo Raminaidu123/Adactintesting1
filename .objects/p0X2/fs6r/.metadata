@@ -1,0 +1,15 @@
+﻿{
+  "Id": "fs6rs77M-kakt4-5ldnM2w",
+  "Reference": "go1OksbVsUKtScm3PWxLKw/fs6rs77M-kakt4-5ldnM2w",
+  "ParentRef": "go1OksbVsUKtScm3PWxLKw/p0X2-TLRJE-K3CF9UVhMvw",
+  "Name": "1.0.0",
+  "Type": "AppVersion",
+  "Created": "2021-12-24T13:33:17.1646438Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-24T13:33:18.5747116Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
