@@ -145,7 +145,7 @@
                       <scg:Dictionary x:TypeArguments="x:String, Argument" />
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
-                  <ra:SendEmailStatus BCC="{x:Null}" CC="{x:Null}" ContinueOnError="{x:Null}" Subject="{x:Null}" AttachCurrentReport="False" DisplayName="Send Email Status (SMTP)" From="raminaidu.s@gmail.com" sap:VirtualizedContainerService.HintSize="334,85.3333333333333" sap2010:WorkflowViewState.IdRef="SendEmailStatus_3" IsEmailSent="[EmailSentAllrecept]" Password="01071987" Port="587" Server="smtp.gmail.com" To="Raminaidu.Sasapu@gmail.com" />
+                  <ra:SendEmailStatus BCC="{x:Null}" CC="{x:Null}" ContinueOnError="{x:Null}" Subject="{x:Null}" AttachCurrentReport="False" DisplayName="Send Email Status (SMTP)" From="raminaidu.s@gmail.com" sap:VirtualizedContainerService.HintSize="334,85.3333333333333" sap2010:WorkflowViewState.IdRef="SendEmailStatus_3" IsEmailSent="[EmailSentAllrecept]" Password="01071987" Port="587" Server="smtp.gmail.com" To="Raminaidu.Sasapu@testingxperts.com" />
                 </Sequence>
               </ActivityAction>
             </ui:ForEachRow.Body>
@@ -474,7 +474,7 @@
                             <InArgument x:TypeArguments="x:String">[ExecutionFlag]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <ra:SendEmailStatus BCC="{x:Null}" CC="{x:Null}" ContinueOnError="{x:Null}" Subject="{x:Null}" AttachCurrentReport="True" DisplayName="Send Email Status (SMTP)" From="raminaidu.s@gmail.com" sap:VirtualizedContainerService.HintSize="334,85.3333333333333" sap2010:WorkflowViewState.IdRef="SendEmailStatus_2" IsEmailSent="[emailsent]" Password="01071987" Port="587" Server="smtp.gmail.com" To="Raminaidu.Sasapu@gmail.com" />
+                        <ra:SendEmailStatus BCC="{x:Null}" CC="{x:Null}" ContinueOnError="{x:Null}" Subject="{x:Null}" AttachCurrentReport="True" DisplayName="Send Email Status (SMTP)" From="raminaidu.s@gmail.com" sap:VirtualizedContainerService.HintSize="334,85.3333333333333" sap2010:WorkflowViewState.IdRef="SendEmailStatus_2" IsEmailSent="[emailsent]" Password="01071987" Port="587" Server="smtp.gmail.com" To="Raminaidu.Sasapu@testingxperts.com" />
                       </Sequence>
                     </If.Then>
                     <If.Else>
