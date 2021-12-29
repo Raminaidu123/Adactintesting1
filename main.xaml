@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1158.66666666667,6328.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1158.66666666667,6454</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>main_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
@@ -89,15 +89,15 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="main" sap:VirtualizedContainerService.HintSize="1168.66666666667,6264" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="main" sap:VirtualizedContainerService.HintSize="1168.66666666667,6389.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[ExecutionFlag = &quot;All&quot;]" sap:VirtualizedContainerService.HintSize="1126.66666666667,6172" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[ExecutionFlag = &quot;All&quot;]" sap:VirtualizedContainerService.HintSize="1126.66666666667,6297.33333333333" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="478.666666666667,6008" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap:VirtualizedContainerService.HintSize="478.666666666667,6133.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="sd:DataTable" Name="ExecuteAllDT" />
           </Sequence.Variables>
@@ -116,13 +116,17 @@
               </InArgument>
             </ui:ReadRange.Range>
           </ui:ReadRange>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ExecuteAllDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="436.666666666667,432" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ExecuteAllDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="436.666666666667,557.333333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,308" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,433.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Boolean" Name="emailsent1" />
+                    <Variable x:TypeArguments="x:Boolean" Name="EmailSentAllrecept" />
+                  </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -141,6 +145,7 @@
                       <scg:Dictionary x:TypeArguments="x:String, Argument" />
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
+                  <ra:SendEmailStatus BCC="{x:Null}" CC="{x:Null}" ContinueOnError="{x:Null}" Subject="{x:Null}" AttachCurrentReport="False" DisplayName="Send Email Status (SMTP)" From="raminaidu.s@gmail.com" sap:VirtualizedContainerService.HintSize="334,85.3333333333333" sap2010:WorkflowViewState.IdRef="SendEmailStatus_3" IsEmailSent="[EmailSentAllrecept]" Password="01071987" Port="587" Server="smtp.gmail.com" To="Raminaidu.Sasapu@gmail.com" />
                 </Sequence>
               </ActivityAction>
             </ui:ForEachRow.Body>
@@ -393,7 +398,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="602,1566.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence sap:VirtualizedContainerService.HintSize="602,1692" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <Sequence.Variables>
             <Variable x:TypeArguments="sd:DataTable" Name="IndividualDT" />
           </Sequence.Variables>
@@ -411,13 +416,13 @@
           </ui:ReadRange>
           <ra:CreateReport ContinueOnError="{x:Null}" isCreated="{x:Null}" DisplayName="Create Report" sap:VirtualizedContainerService.HintSize="560,134.666666666667" sap2010:WorkflowViewState.IdRef="CreateReport_2" ReportLocation="C:\Users\Raminaidu Sasapu\OneDrive\Documents\UiPath\Reports" ReportName="Adactin Automation Report" />
           <ra:StartSuite ContinueOnError="{x:Null}" suiteList="{x:Null}" DisplayName="Start Suite" sap:VirtualizedContainerService.HintSize="560,85.3333333333333" sap2010:WorkflowViewState.IdRef="StartSuite_2" SuiteName="Adactin Automation Report" />
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[IndividualDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,1048" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[IndividualDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,1173.33333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,924" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,1049.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="StrIndExeFlg" />
                     <Variable x:TypeArguments="x:String" Name="intwos" />
@@ -435,11 +440,12 @@
                       <InArgument x:TypeArguments="x:String">[CurrentRow.Item("RunFlag").ToString]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <If Condition="[StrIndExeFlg = &quot;True&quot;]" sap:VirtualizedContainerService.HintSize="484,730" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If Condition="[StrIndExeFlg = &quot;True&quot;]" sap:VirtualizedContainerService.HintSize="484,855.333333333333" sap2010:WorkflowViewState.IdRef="If_2">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="376,535.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,660.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="StrWorkflow" />
+                          <Variable x:TypeArguments="x:Boolean" Name="emailsent" />
                         </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -468,6 +474,7 @@
                             <InArgument x:TypeArguments="x:String">[ExecutionFlag]</InArgument>
                           </Assign.Value>
                         </Assign>
+                        <ra:SendEmailStatus BCC="{x:Null}" CC="{x:Null}" ContinueOnError="{x:Null}" Subject="{x:Null}" AttachCurrentReport="True" DisplayName="Send Email Status (SMTP)" From="raminaidu.s@gmail.com" sap:VirtualizedContainerService.HintSize="334,85.3333333333333" sap2010:WorkflowViewState.IdRef="SendEmailStatus_2" IsEmailSent="[emailsent]" Password="01071987" Port="587" Server="smtp.gmail.com" To="Raminaidu.Sasapu@gmail.com" />
                       </Sequence>
                     </If.Then>
                     <If.Else>
