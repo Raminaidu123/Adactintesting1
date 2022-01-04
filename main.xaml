@@ -362,7 +362,7 @@
               </Sequence>
             </ui:CommentOut.Body>
           </ui:CommentOut>
-          <ra:SendEmailStatus BCC="{x:Null}" CC="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" IsEmailSent="{x:Null}" Password="{x:Null}" AttachCurrentReport="True" DisplayName="Send Email Status (SMTP)" sap:VirtualizedContainerService.HintSize="436.666666666667,85.3333333333333" sap2010:WorkflowViewState.IdRef="SendEmailStatus_1" Port="993" Server="imap.gmail.com" Subject="Adactin Automation Report" To="raminaidxu.sasa1pu@testingxperts.com" />
+          <ra:SendEmailStatus BCC="{x:Null}" CC="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" IsEmailSent="{x:Null}" Password="{x:Null}" AttachCurrentReport="True" DisplayName="Send Email Status (SMTP)" sap:VirtualizedContainerService.HintSize="436.666666666667,85.3333333333333" sap2010:WorkflowViewState.IdRef="SendEmailStatus_1" Port="993" Server="imap.gmail.com" Subject="Adactin Automation Report" To="raminavvvidxu.sasa1pu@testingxperts.com" />
         </Sequence>
       </If.Then>
       <If.Else>
