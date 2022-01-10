@@ -4,6 +4,7 @@
     <x:Property Name="StrWorkflowname" Type="InArgument(x:String)" />
     <x:Property Name="OutputArgument" Type="OutArgument(x:String)" />
     <x:Property Name="IndividualTCList" Type="InArgument(x:String)" />
+    <x:Property Name="argument1" Type="InArgument(x:String)" />
   </x:Members>
   <this:main.StrWorkflowname>
     <InArgument x:TypeArguments="x:String" />
@@ -367,15 +368,25 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="602,1692" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence sap:VirtualizedContainerService.HintSize="602,1919.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <Sequence.Variables>
             <Variable x:TypeArguments="sd:DataTable" Name="IndividualDT" />
+            <Variable x:TypeArguments="x:String" Name="ArrIndTC" />
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="560,62" sap2010:WorkflowViewState.IdRef="Assign_5">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[ArrIndTC]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[IndividualTCList.Split(Cchar(",")).ToString]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="560,85.3333333333333" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[ArrIndTC.Length]" />
           <ui:ReadRange AddHeaders="True" DataTable="[IndividualDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="560,86.6666666666667" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="C:\Users\Raminaidu Sasapu\OneDrive\Documents\UiPath\TestData\Adactin.xlsx">
             <ui:ReadRange.Range>
               <InArgument x:TypeArguments="x:String">
