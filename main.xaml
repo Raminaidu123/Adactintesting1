@@ -3,6 +3,7 @@
     <x:Property Name="ExecutionFlag" Type="InOutArgument(x:String)" />
     <x:Property Name="StrWorkflowname" Type="InArgument(x:String)" />
     <x:Property Name="OutputArgument" Type="OutArgument(x:String)" />
+    <x:Property Name="IndividualTCList" Type="InArgument(x:String)" />
   </x:Members>
   <this:main.StrWorkflowname>
     <InArgument x:TypeArguments="x:String" />
