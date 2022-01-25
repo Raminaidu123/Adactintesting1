@@ -6,7 +6,7 @@
 trigger:
 - main
 
-pool: TXHYD_LAP_118
+pool: Default
 steps:
 
 - task: UiPathRunJob@2
