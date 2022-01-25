@@ -9,10 +9,9 @@ trigger:
 pool: Tx_HYD_LAP_118
 steps:
 
-- task: UiPathTest@2
+- task: UiPathRunJob@2
   inputs:
-    testTarget: 'TestSet'
-    orchestratorConnection: 'Orchestrator'
-    testSet: 'Tx_HyperAutomationProject'
-    folderName: 'Testing21TxUiPathFolder'
+    orchestratorConnection: 'UipathIntegration'
+    processName: 'AdactinProcessAutomation'
+    folderName: 'Raminaidu UIPathStudio'
 
