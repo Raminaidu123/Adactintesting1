@@ -6,7 +6,8 @@
 trigger:
 - main
 
-pool:TX_HYD_LAP_118
+pool:
+name: TX_HYD_LAP_118
   
 
 steps:
