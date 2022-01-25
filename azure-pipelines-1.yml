@@ -6,14 +6,11 @@
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
+pool:TX_HYD_LAP_118
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: UiPathRunJob@2
+inputs:
+      orchestratorConnection: 'UipathIntegration'
+      processName: 'AdactinProcessAutomation'
+      folderName: 'Raminaidu UIPathStudio'
