@@ -6,11 +6,13 @@
 trigger:
 - main
 
-pool:TX_HYD_LAP_118
-
+pool: Tx_HYD_LAP_118
 steps:
-- task: UiPathRunJob@2
-inputs:
-      orchestratorConnection: 'UipathIntegration'
-      processName: 'AdactinProcessAutomation'
-      folderName: 'Raminaidu UIPathStudio'
+
+- task: UiPathTest@2
+  inputs:
+    testTarget: 'TestSet'
+    orchestratorConnection: 'Orchestrator'
+    testSet: 'Tx_HyperAutomationProject'
+    folderName: 'Testing21TxUiPathFolder'
+
