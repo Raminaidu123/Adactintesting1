@@ -9,9 +9,12 @@ trigger:
 pool: Default
 steps:
 
-- task: UiPathRunJob@2
-  inputs:
-    orchestratorConnection: 'UipathIntegration'
-    processName: 'AdactinProcessAutomation'
-    folderName: 'Raminaidu UIPathStudio'
+
+    - task: UiPathRunJob@2
+      inputs:
+        orchestratorConnection: 'UipathIntegration'
+        processName: 'AdactinProcessAutomation'
+        folderName: 'Raminaidu UIPathStudio'
+        jobType: 'TestAutomation'
+        user: 'txhyd_lap_118\raminaidu sasapu'
 
